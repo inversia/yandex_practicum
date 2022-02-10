@@ -1,0 +1,7 @@
+{
+    "data": "data",
+    "decorators": "decorators",
+    "helpers": "helpers",
+    "layouts": "layouts",
+    "partials": "components"
+}

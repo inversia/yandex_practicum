@@ -2,15 +2,24 @@
 	"name": "test",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
 	"scripts": {
-		"dev": "parcel index.html",
-		"build": "parcel build index.html"
+		"cleanup": "rm -rf .parcel-cache dist",
+		"build": "npm run cleanup && cd src && parcel build index.hbs pages/**/*.hbs --dist-dir ../dist",
+		"watch": "node watch",
+		"serve": "cd dist && python3 -m http.server 3000"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-	"parcel": "^2.2.1" 
-  }
-} 
+		"@anikin/parcel-transformer-handlebars": "^1.0.9",
+		"@parcel/transformer-sass": "^2.2.1",
+		"@types/lodash": "^4.14.178",
+		"chokidar": "^3.5.3",
+		"parcel": "^2.2.1"
+	},
+	"dependencies": {
+		"handlebars": "^4.7.7",
+		"lodash": "^4.17.21"
+	}
+}
