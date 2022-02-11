@@ -1,5 +1,6 @@
 @import '../components/Button.scss';
-@import '../components/Form.scss';
+// @import '../components/Form.scss';
+@import '../components/ChatItem.scss';
 
 html {
     box-sizing: border-box;
@@ -14,6 +15,7 @@ html {
     body {
 
         color:var(--light-black);
+        margin: 0;
 
         &.center {
             display: flex;
@@ -29,22 +31,51 @@ html {
             align-items: center;
             box-shadow: 0vw 0vw 2.1vw 0.2vw rgba(0, 0, 0, 0.089);
             border-radius: 1vw;
+            background-color: rgba(255, 255, 255, 0.801);
     
             h1 {
                 margin: 0;
                 margin-bottom:3vw;
                 font-size: 3vw;
             }
-    
-            input {
-                outline: none;
-                border:none;
-                border-bottom: 1px solid grey;
-                margin-bottom: 1em;
-                font-family: 'Ubuntu';
-                font-size: var(--form-font-size);
+
+            .input-wrapper {
                 width: 100%;
+                position: relative;
+                margin-bottom: 0.5em;
+
+                input {
+                    outline: none;
+                    border:none;
+                    border-bottom: 1px solid grey;
+                    margin-bottom: 1em;
+                    font-family: 'Ubuntu';
+                    font-size: var(--form-font-size);
+                    width: 100%;
+                    position: relative;
+                    z-index: 2;
+                    background-color: transparent;
+                }
+
+                label {
+                    position: absolute;
+                    left:0;
+                    top:0;
+                    font-size: 1.5vw;
+                    z-index: 1;
+                    color:grey;
+                }
+
+                input:not(:placeholder-shown) + label,
+                input:focus + label {
+                    font-size: 1vw;
+                    top:-40%;
+                    color:var(--light-black);
+                }
+                
             }
+    
+            
     
             a {
                 cursor: pointer;

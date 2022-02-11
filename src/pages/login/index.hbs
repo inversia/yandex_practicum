@@ -2,8 +2,8 @@
     {{#content "content"}}
     <form>
         <h1>Вход</h1>
-        <input type="text" placeholder="Логин" />
-        <input type="password" placeholder="Пароль" />
+        {{> Input type="text" title="Логин"}}
+        {{> Input type="password" title="Пароль" name="password"}}
         <a class='button-solid' onclick="alert('ЩА ВСЁ БУДЕТ!')">Авторизоваться</a>
         <a href='/pages/register/'>Нет аккаунта?</a>
     </form>

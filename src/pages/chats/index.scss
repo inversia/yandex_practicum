@@ -1,0 +1,60 @@
+.chats-wrapper {
+
+    height: 100%;
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+
+    & > * {
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .chat-list-wrapper {
+        flex:0.6;
+        // border: 3px solid rgb(251, 255, 0);
+        height: 100%;
+        position: relative;
+        flex-direction: column;
+        display: flex;
+        margin: 1em;
+      
+
+        button {
+            border:none;
+            background-color: transparent;
+            position: relative;
+            top:0;
+            cursor: pointer;
+            display: block;
+            margin: 2em;
+            margin-top: 1em;
+            font-family: 'Ubuntu', sans-serif;
+            
+        }
+
+        input {
+            width:100%;
+            outline: none;
+            font-family: 'Ubuntu', sans-serif;
+           
+            // background-color: #e7ff00;
+            background-color: #e7ff005e;
+            background: linear-gradient(to left,#e7ff00 3%,#e5ff0041 57%);
+            border:none;
+            padding: 0.5em;
+            border-radius: 0.5vw;
+            margin-bottom: 2em;
+
+        }
+
+        .chat-list {
+            // background-color: rgba(128, 128, 128, 0.247);
+        }
+    }
+
+    .chat {
+        flex:2;
+        border: 3px solid rgb(251, 255, 0);
+        height: 100%;
+    
+    }
+}

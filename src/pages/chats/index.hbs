@@ -1,0 +1,83 @@
+---
+
+users:
+  - username: Vtl4ek
+    avatar: ../../components/images/normalInside.jpeg
+    lastMessage: 'С того времени, как человек получил возможность называться разумным, его постоянно донимал вопрос: как избежать смерти?'
+    messageCounter: 3
+    time: '12:30'
+  - username: Mommy
+    avatar: ../../components/images/unicorn.jpeg
+    lastMessage: 'Яночка, купи соль!'
+    messageCounter: 1
+    time: '09:13'
+  - username: Zazu
+    avatar: ../../components/images/putiputi.jpeg
+    lastMessage: Ты пидръ
+    messageCounter: 2
+    time: '3:33'
+  - username: Vtl4ek
+    avatar: ../../components/images/normalInside.jpeg
+    lastMessage: 'С того времени, как человек получил возможность называться разумным, его постоянно донимал вопрос: как избежать смерти?'
+    messageCounter: 3
+    time: '12:30'
+  - username: Mommy
+    avatar: ../../components/images/unicorn.jpeg
+    lastMessage: 'Яночка, купи соль!'
+    messageCounter: 1
+    time: '09:13'
+  - username: Zazu
+    avatar: ../../components/images/putiputi.jpeg
+    lastMessage: Ты пидръ
+    messageCounter: 2
+    time: '3:33'
+  - username: Vtl4ek
+    avatar: ../../components/images/normalInside.jpeg
+    lastMessage: 'С того времени, как человек получил возможность называться разумным, его постоянно донимал вопрос: как избежать смерти?'
+    messageCounter: 3
+    time: '12:30'
+  - username: Mommy
+    avatar: ../../components/images/unicorn.jpeg
+    lastMessage: 'Яночка, купи соль!'
+    messageCounter: 1
+    time: '09:13'
+  - username: Zazu
+    avatar: ../../components/images/putiputi.jpeg
+    lastMessage: Ты пидръ
+    messageCounter: 2
+    time: '3:33'
+---
+
+
+
+{{#extend "default"}}
+    {{#content "content"}}
+        <div class="chats-wrapper">
+            <div class="chat-list-wrapper">
+                <button>Профайл</button>
+                <input placeholder="поиск" type="search"></input>
+                <div class="chat-list">
+                    {{#each users}}
+                        {{> ChatItem this }}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="chat"></div>
+        </div>
+    {{/content}}
+
+{{/extend}}
+
+
+{{!-- {{#extend "Form"}}
+            {{#content "title"}}Войти в IT{{/content}}
+            {{#content "inputs"}}
+                {{> Button text="foo"}}
+                {{> Button text="foo"}}
+                {{> Button text="foo"}}
+            {{/content}}
+            {{#content "buttons"}}
+                {{> Button text="foo"}}
+                {{> Button text="foo"}}
+            {{/content}}
+        {{/extend}} --}}
