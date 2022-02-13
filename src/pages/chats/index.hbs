@@ -1,12 +1,12 @@
 ---
 
 users:
-  - username: Vtl4ek
+  - username: Norm man
     avatar: ../../components/images/normalInside.jpeg
-    lastMessage: 'С того времени, как человек получил возможность называться разумным, его постоянно донимал вопрос: как избежать смерти?'
+    lastMessage: 'Ресурсы, посвящённые симуляции жидкостей, могут быть очень пугающими.'
     messageCounter: 3
     time: '12:30'
-  - username: Mommy
+  - username: Bro
     avatar: ../../components/images/unicorn.jpeg
     lastMessage: 'Яночка, купи соль!'
     messageCounter: 1
@@ -17,19 +17,19 @@ users:
     messageCounter: 2
     time: '3:33'
   - username: Vtl4ek
-    avatar: ../../components/images/normalInside.jpeg
+    avatar: ../../components/images/abstract.jpg
     lastMessage: 'С того времени, как человек получил возможность называться разумным, его постоянно донимал вопрос: как избежать смерти?'
-    messageCounter: 3
+    messageCounter: 23
     time: '12:30'
   - username: Mommy
-    avatar: ../../components/images/unicorn.jpeg
+    avatar: ../../components/images/tusich.jpeg
     lastMessage: 'Яночка, купи соль!'
     messageCounter: 1
     time: '09:13'
   - username: Zazu
     avatar: ../../components/images/putiputi.jpeg
     lastMessage: Ты пидръ
-    messageCounter: 2
+    messageCounter: 4
     time: '3:33'
   - username: Vtl4ek
     avatar: ../../components/images/normalInside.jpeg
@@ -39,13 +39,23 @@ users:
   - username: Mommy
     avatar: ../../components/images/unicorn.jpeg
     lastMessage: 'Яночка, купи соль!'
-    messageCounter: 1
+    messageCounter: 18
     time: '09:13'
   - username: Zazu
-    avatar: ../../components/images/putiputi.jpeg
+    avatar: ../../components/images/abstract.jpg
     lastMessage: Ты пидръ
     messageCounter: 2
     time: '3:33'
+  - username: Norm man
+    avatar: ../../components/images/normalInside.jpeg
+    lastMessage: 'Ресурсы, посвящённые симуляции жидкостей, могут быть очень пугающими.'
+    messageCounter: 3
+    time: '12:30'
+  - username: Bro
+    avatar: ../../components/images/unicorn.jpeg
+    lastMessage: 'Яночка, купи соль!'
+    messageCounter: 1
+    time: '09:13'  
 ---
 
 
@@ -54,7 +64,7 @@ users:
     {{#content "content"}}
         <div class="chats-wrapper">
             <div class="chat-list-wrapper">
-                <button>Профайл</button>
+                <button></button>
                 <input placeholder="поиск" type="search"></input>
                 <div class="chat-list">
                     {{#each users}}
@@ -62,22 +72,29 @@ users:
                     {{/each}}
                 </div>
             </div>
-            <div class="chat"></div>
+            <div class="chat">
+                <div class="active-user-menu">
+                  <div class="avatar" style="background-image: url(../../components/images/putiputi.jpeg)"></div>
+                  <div class="username">Zeliboba</div>
+                  <button>
+                    <nav>
+					  {{> DropdownButton img="../../components/icons/add.svg" link="" text="Добавить пользователя" callback=""}}
+					  {{> DropdownButton img="../../components/icons/add.svg" link="" text="Удалить пользователя" callback="" className="delete"}}
+                    </nav>
+                  </button>
+                </div>
+                <div class="messages">
+                    {{> MessageBlob class="own-message" time="15:45" text="Вместо замены “изношенного” органа можно организовать его ремонт на месте. Сделать это можно с помощью наноботов – субмикронных устройств, способных проникать в нужное место с током крови и/или лимфы и производить необходимые операции на клеточном или даже молекулярном уровне."}}
+                    {{> MessageBlob time="11:22" text="И вот, когда надежда, казалось бы, окончательно увяла, тема вечной жизни вновь обрела актуальность. Взрывное развитие биофизики и робототехники обозначило пути достижения бессмертия совершенно отчётливо."}}
+                    {{> MessageBlob time="11:40" text="По прибытии на место киборг приступит к колонизации, не сильно беспокоясь о вопросах жизнеобеспечения."}}
+                </div>
+                <div class="message-inputs-wrapper">
+                    <button class="add-media"></button>
+                    <textarea></textarea>
+                    <button class="send"></button>
+                </div>
+            </div>
         </div>
     {{/content}}
 
 {{/extend}}
-
-
-{{!-- {{#extend "Form"}}
-            {{#content "title"}}Войти в IT{{/content}}
-            {{#content "inputs"}}
-                {{> Button text="foo"}}
-                {{> Button text="foo"}}
-                {{> Button text="foo"}}
-            {{/content}}
-            {{#content "buttons"}}
-                {{> Button text="foo"}}
-                {{> Button text="foo"}}
-            {{/content}}
-        {{/extend}} --}}

@@ -1,0 +1,78 @@
+.blob-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+    &.own-message {
+        justify-content: end;
+
+        .blob {
+            background: linear-gradient(70deg, rgba(246, 255, 196, 0.808) 40%, rgb(212, 211, 255) 90%);
+            p {
+                
+            }
+
+            .message-info {
+                display: flex;
+                flex-direction: row;
+                
+                .viewed {
+                    background-image: url(../components/icons/eye.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    width: 0.8vw;
+                    margin-top: 0.3em;
+                }
+        
+                span {
+                    display: block;
+                    margin-left: 0.3em;
+                    color: var(--grey);
+
+                }
+
+            }
+        }
+    }
+
+    .blob {
+        max-width: 40vw;
+        padding: var(--chats-padding);
+
+        background: linear-gradient(70deg, rgba(196, 233, 255, 0.808) 30%, rgb(212, 211, 255) 90%);
+        border-radius: 2vw 2vw 2vw 2vw;
+        font-weight: 400;
+        font-size: 1.2vw;
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            color:rgb(58, 58, 58);
+        }
+
+        .message-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+
+            .viewed {
+
+            }
+    
+            span {
+                display: block;
+                position: relative;
+                right:0;
+                margin-top: 0.5em;
+                font-size: 0.8vw;
+            }
+        }
+
+        
+    }
+
+    
+}

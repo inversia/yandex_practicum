@@ -1,9 +1,12 @@
+@import '../utils/reset.css';
+@import '../utils/border-box.css';
 @import '../components/Button.scss';
-// @import '../components/Form.scss';
 @import '../components/ChatItem.scss';
+@import '../components/MessageBlob.scss';
+@import '../components/DropdownButton.scss';
+
 
 html {
-    box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
@@ -11,6 +14,7 @@ html {
     --form-font-size:1.5vw;
     
     --light-black:rgb(53, 53, 53);
+    --grey:#7D7D7D;
 
     body {
 
@@ -22,6 +26,25 @@ html {
             align-items: center;
             justify-content: center;
         }
+
+        button {
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            border:none;
+            display: block;
+            cursor: pointer;
+        }
+
+        input {
+            outline: none;
+        }
+
+        textarea {
+            outline: none;
+            font-family: 'Ubuntu', sans-serif;
+        }
     
         form {
             display: flex;
@@ -32,6 +55,7 @@ html {
             box-shadow: 0vw 0vw 2.1vw 0.2vw rgba(0, 0, 0, 0.089);
             border-radius: 1vw;
             background-color: rgba(255, 255, 255, 0.801);
+            margin: 5vw;
     
             h1 {
                 margin: 0;
