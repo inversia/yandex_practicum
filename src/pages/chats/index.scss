@@ -1,6 +1,6 @@
 .chats-wrapper {
 
-    height: 100%;
+    flex: 1;
     display: flex;
     font-family: 'Ubuntu', sans-serif;
     --chats-padding:1.2vw;
@@ -11,20 +11,18 @@
 
     .chat-list-wrapper {
         flex:0.6;
-        // border: 3px solid rgb(251, 255, 0);
-        // height: 100%;
         position: relative;
         flex-direction: column;
         display: flex;
-        // margin: 1em;
         padding: var(--chats-padding);
         box-shadow: 0vw 0vw 2.1vw 0.2vw rgba(0, 0, 0, 0.089);
+        align-content: stretch;
+        overflow: hidden;
       
 
-        button {
+        a {
             border:none;
             background-color: transparent;
-            // position: relative;
             top:0;
             cursor: pointer;
             display: flex;
@@ -32,16 +30,13 @@
             align-items: center;
             margin: 0 auto;
             margin-bottom: 1em;
-            // margin: 2em;
-            // margin-top: 1em;
             font-family: 'Ubuntu', sans-serif;
             background-image: url(../../components/icons/profile.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
             height: 3vw;
             width: 3vw;
-            // background-repeat: no-repeat;
-            // background-size: contain;
-            // background-position: center;
-
             
         }
 
@@ -49,10 +44,7 @@
             width:100%;
             outline: none;
             font-family: 'Ubuntu', sans-serif;
-           
-            // background-color: #e7ff00;
-            background-color: #e7ff005e;
-            background: linear-gradient(to left,#e7ff00 3%,#e5ff0041 57%);
+            background: linear-gradient(to left,var(--acid-lime) 3%,#e5ff0041 57%);
             border:none;
             padding: 0.5em;
             border-radius: 0.5vw;
@@ -61,14 +53,13 @@
         }
 
         .chat-list {
-            // background-color: rgba(128, 128, 128, 0.247);
             overflow: scroll;
         }
     }
 
     .chat {
         flex:2;
-        padding: var(--chats-padding);
+        padding: var(--chats-padding) var(--chats-padding) 0vw var(--chats-padding);
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -84,6 +75,7 @@
             
             .avatar {
                 width: 3vw;
+                min-height: 3vw;
                 border-radius: 100%;
                 background-color: aqua;
                 background-size: cover;
@@ -109,31 +101,25 @@
                 background-size: contain;
 
                 nav {
-                    position: absolute;
                     right:3vw;
-                    top:2vw;
-                    box-shadow: 0vw 0vw 1.1vw 0.2vw rgba(0, 0, 0, 0.089);
-                    display: flex;
-                    flex-direction: column;
-                    border-radius: 1.2vw;
-                    background-color: white;
+                    top:3vw;       
                 }
             }
         }
 
         .messages {
+            overflow: scroll;
             flex:1;
-            border-bottom:1px solid rgba(156, 156, 156, 0.068);
-            border-top:1px solid rgba(156, 156, 156, 0.068);
-            // background-image: url(../../components/images/abstract.jpeg);
-            display: flex;
-            flex-direction: column;
+            border-bottom:1px solid var(--super-light-grey);
+            border-top:1px solid var(--super-light-grey);
             background-repeat: no-repeat;
             background-size: cover;
             justify-content: flex-end;
             padding-bottom: var(--chats-padding);
-            // padding: var(--chats-padding);
-            // border-radius: 1.2vw;
+
+            .messages-wrapper {
+                
+            }
 
         }
 
@@ -142,21 +128,34 @@
             flex-direction: row;
             position: relative;
             margin-top: var(--chats-padding);
+            margin-bottom: var(--chats-padding);
+            height: 3vw;
+           
             
 
             button {
                 width:2.5vw;
                 background-image: url(../../components/icons/plus.svg);
                 margin-right: 1em;
+                position: relative;
+
+                nav {
+                    // position: absolute;
+                    bottom: 3.5vw;
+                    left:-2vw;
+                }
+
             }
 
-            input, textarea {
+            textarea, input {
                 width: 87%;
                 border-radius: 0.7vw;
                 border: none;
                 background-color: #e7ff00;
-                padding: 0.5em 0.7em;
-                height: 2em;
+                padding: 0.5em 0.5em;
+                height: 100%;
+                
+                
             }
 
             .send {
@@ -168,6 +167,7 @@
                 background-size: contain;
                 background-image: url(../../components/icons/send_message.svg);
                 margin-right: 0;
+                margin-left: 2vw;
             }
         }
     }

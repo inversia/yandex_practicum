@@ -70,11 +70,10 @@ body {
                         flex: 1;
                     }
     
-                    span {
+                    span, input {
                         flex: 1;
                         color:grey;
                         font-size: inherit;
-                        // border: 1px solid grey;
                     }
                 }
             }
@@ -93,20 +92,6 @@ body {
                     white-space: nowrap;
                     padding: 1vw 1.5vw;
                     font-size: var( --profile-font);
-                }
-    
-                .change-data {
-    
-                }
-    
-                .logout {
-                    background-image: url(../../components/icons/logout.svg);
-                    background-size: 60%;
-                    background-position: 35% 50%;
-                }
-    
-                .change-password {
-    
                 }
             }
         }

@@ -64,7 +64,7 @@ users:
     {{#content "content"}}
         <div class="chats-wrapper">
             <div class="chat-list-wrapper">
-                <button></button>
+                <a href="/pages/profile"></a>
                 <input placeholder="поиск" type="search"></input>
                 <div class="chat-list">
                     {{#each users}}
@@ -78,19 +78,28 @@ users:
                   <div class="username">Zeliboba</div>
                   <button>
                     <nav>
-					  {{> DropdownButton img="../../components/icons/add.svg" link="" text="Добавить пользователя" callback=""}}
-					  {{> DropdownButton img="../../components/icons/add.svg" link="" text="Удалить пользователя" callback="" className="delete"}}
+					            {{> DropdownButton img="../../components/icons/add.svg" link="" text="Добавить пользователя" callback=""}}
+					            {{> DropdownButton img="../../components/icons/add.svg" link="" text="Удалить пользователя" callback="" className="delete"}}
                     </nav>
                   </button>
                 </div>
                 <div class="messages">
-                    {{> MessageBlob class="own-message" time="15:45" text="Вместо замены “изношенного” органа можно организовать его ремонт на месте. Сделать это можно с помощью наноботов – субмикронных устройств, способных проникать в нужное место с током крови и/или лимфы и производить необходимые операции на клеточном или даже молекулярном уровне."}}
-                    {{> MessageBlob time="11:22" text="И вот, когда надежда, казалось бы, окончательно увяла, тема вечной жизни вновь обрела актуальность. Взрывное развитие биофизики и робототехники обозначило пути достижения бессмертия совершенно отчётливо."}}
-                    {{> MessageBlob time="11:40" text="По прибытии на место киборг приступит к колонизации, не сильно беспокоясь о вопросах жизнеобеспечения."}}
+                    <div class="messages-wrapper">
+                      {{> MessageBlob class="own-message" time="15:45" text="Вместо замены “изношенного” органа можно организовать его ремонт на месте. Сделать это можно с помощью наноботов – субмикронных устройств, способных проникать в нужное место с током крови и/или лимфы и производить необходимые операции на клеточном или даже молекулярном уровне."}}
+                      {{> MessageBlob time="11:22" text="И вот, когда надежда, казалось бы, окончательно увяла, тема вечной жизни вновь обрела актуальность. Взрывное развитие биофизики и робототехники обозначило пути достижения бессмертия совершенно отчётливо."}}
+                      {{> MessageBlob time="11:40" text="По прибытии на место киборг приступит к колонизации, не сильно беспокоясь о вопросах жизнеобеспечения. Располагая абсолютно всеми знаниями и навыкам, наработанными человечеством к моменту его старта, он сможет понаделать клонов и в течение считаных лет выстроить на пустом месте не убогую базу, а полноценную цивилизацию – с промышленностью, наукой, транспортом, блэкджеком и так далее. А если что-то пойдёт не так, без сожаления покинет негостеприимное место и продолжит странствия в прежнем режиме. Или впадёт в спячку и будет дожидаться подмоги – хоть десятки лет, хоть десятки тысяч. Только так человечество сможет освоить Солнечную систему, а потом выйти за её пределы. Неясно лишь одно: насколько тут подходит слово “человечество”..."}}
+                    </div>
                 </div>
                 <div class="message-inputs-wrapper">
-                    <button class="add-media"></button>
+                    <button class="add-media">
+                      <nav>
+					              {{> DropdownButton img="../../components/icons/image.svg" link="" text="Фото или видео" callback=""}}
+					              {{> DropdownButton img="../../components/icons/file.svg" link="" text="Файл" callback=""}}
+                        {{> DropdownButton img="../../components/icons/location.svg" link="" text="Локация" callback=""}}
+                      </nav>
+                    </button>
                     <textarea></textarea>
+                    
                     <button class="send"></button>
                 </div>
             </div>

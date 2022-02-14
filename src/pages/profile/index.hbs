@@ -1,26 +1,41 @@
 {{#extend "default"}}
- 
-    {{!-- {{#content "title"}}Profile{{/content}}
-  --}}
     {{#content "content"}}
-        <div class=""
-            <div class=""></div>
-            <div class=""></div>
-        </div>
+        {{#extend "profileBase"}}
+            {{#content "name"}}
+                <span>Godzira</span>
+            {{/content}}
+                {{#content "items"}}
+                    <div class="info-item">
+                        <label>Почта</label>
+                        <span>pochta@yandex.ru</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Логин</label>
+                        <span>ivanivanov</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Имя</label>
+                        <span>Иван</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Фамилия</label>
+                        <span>Иванов</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Имя в чате</label>
+                        <span>Godzira</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Телефон</label>
+                        <span>+7 (909) 967 30 30</span>
+                    </div>
+                {{/content}}
+                {{#content "buttons"}}
+                    <button class="change-data">Изменить данные</button>
+                    <a class="logout" href="/pages/login"></a>
+                    <button class="change-password">Изменить пароль</button>
+                {{/content}}
+            </div>
+        {{/extend}}
     {{/content}}
- 
 {{/extend}}
-
-
-{{!-- {{#extend "Form"}}
-            {{#content "title"}}Войти в IT{{/content}}
-            {{#content "inputs"}}
-                {{> Button text="foo"}}
-                {{> Button text="foo"}}
-                {{> Button text="foo"}}
-            {{/content}}
-            {{#content "buttons"}}
-                {{> Button text="foo"}}
-                {{> Button text="foo"}}
-            {{/content}}
-        {{/extend}} --}}
