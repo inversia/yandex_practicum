@@ -4,6 +4,7 @@
 @import '../components/ChatItem.scss';
 @import '../components/MessageBlob.scss';
 @import '../components/DropdownButton.scss';
+@import '../layouts/profileBase.scss';
 
 
 html {
@@ -21,8 +22,11 @@ html {
     body {
 
         color:var(--light-black);
-        margin: 0;
+        margin: 0 auto!important;
         display: flex;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
 
         &.center {
             display: flex;
@@ -71,6 +75,7 @@ html {
             border-radius: 1vw;
             background-color: rgba(255, 255, 255, 0.801);
             margin: 5vw;
+            max-width: 40vw;
     
             h1 {
                 margin: 0;

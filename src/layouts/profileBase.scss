@@ -1,6 +1,4 @@
 body {
-    display: block!important;
-
     .profile-wrapper {
         display: flex;
         flex-direction: row;
@@ -22,7 +20,7 @@ body {
         }
     
         .back {
-            background-image: url(../../components/icons/back.svg);
+            background-image: url(../components/icons/back.svg);
             width: 5vw;
             border-radius: 0vw 1vw 1vw 0vw;
         }
@@ -37,7 +35,7 @@ body {
             
     
             .avatar{
-                background-image: url(../../components/images/putiputi.jpeg);
+                background-image: url(../components/images/putiputi.jpeg);
                 background-repeat: no-repeat;
                 height: 10vw;
                 min-height: 10vw;
@@ -75,6 +73,15 @@ body {
                         color:grey;
                         font-size: inherit;
                     }
+
+                    input {
+                        border: none;
+                        padding: 1em;
+                        
+                        &::placeholder {
+                            color:rgba(128, 128, 128, 0.445);
+                        }
+                    }
                 }
             }
     
@@ -84,8 +91,6 @@ body {
                 justify-content: space-between;
                 width: 100%;
                
-                
-    
                 button, a {
                     height: 3vw;
                     border-radius:0.9vw;

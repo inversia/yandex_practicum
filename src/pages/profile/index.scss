@@ -2,113 +2,16 @@ body {
     display: block!important;
 
     .profile-wrapper {
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        justify-content: center!important;
-        --profile-font:1.2vw;
-        align-items: center;
-    
-        button, a {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            background-color: var(--acid-lime);
-            background-size: 70%;
-            color:var(--light-black);
-            background-repeat: no-repeat;
-            background-position: center;
-            cursor: pointer;
-        }
-    
-        .back {
-            background-image: url(../../components/icons/back.svg);
-            width: 5vw;
-            border-radius: 0vw 1vw 1vw 0vw;
-        }
-    
-        .profile-content {
-            display: flex;
-            flex-direction: column;
-            margin: 5vw auto;
-            align-items: center;
-            justify-content: center;
-            width: 33vw;
-            
-    
-            .avatar{
-                background-image: url(../../components/images/putiputi.jpeg);
-                background-repeat: no-repeat;
-                height: 10vw;
-                min-height: 10vw;
-                width: 10vw;
-                background-size: cover;
-                border-radius: 100%;
-                cursor: pointer;
-            }
-    
-            span {
-                margin: 1em;
-                font-size: 2vw;
-            }
-    
-            .info {
-                margin-bottom: 3vw;
-                width: 100%;
-    
-    
-                .info-item {
-                    display: flex;
-                    flex-direction: row;
-                    border-bottom: 1px solid var(--super-light-grey);
-                    justify-content: space-between;
-                    padding: 0vw;
-                    align-items: center;
-                    font-size: var( --profile-font);
-    
-                    label {
-                        flex: 1;
-                    }
-    
-                    span {
-                        flex: 1;
-                        color:grey;
-                        font-size: inherit;
-                        // border: 1px solid grey;
-                    }
-                }
-            }
-    
+        .profile-content {    
             .change-buttons {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                width: 100%;
-               
-                
-    
-                button, a {
-                    height: 3vw;
-                    border-radius:0.9vw;
-                    white-space: nowrap;
-                    padding: 1vw 1.5vw;
-                    font-size: var( --profile-font);
-                }
-    
-                .change-data {
-    
-                }
-    
                 .logout {
                     background-image: url(../../components/icons/logout.svg);
                     background-size: 60%;
                     background-position: 35% 50%;
-                }
-    
-                .change-password {
-    
+                    background-repeat: no-repeat;
                 }
             }
         }
     }
 }
+

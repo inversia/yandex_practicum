@@ -1,0 +1,28 @@
+{{#extend "default"}}
+    {{#content "content"}}
+        {{#extend "profileBase"}}
+            {{#content "name"}}
+                <span>Godzira</span>
+            {{/content}}
+                {{#content "items"}}
+                    <div class="info-item">
+                        <label>Старый пароль</label>
+                        <input type="password" placeholder="•••••••••••••••"></input>
+                    </div>
+                    <div class="info-item">
+                        <label>Новый пароль</label>
+                        <input type="password" placeholder="•••••••••••••••••••••••••••"></input>
+                    </div>
+                    <div class="info-item">
+                        <label>Повторите новый пароль</label>
+                        <input type="password" placeholder="•••••••••••••••••••••••••••"></input>
+                    </div>
+                    
+                {{/content}}
+                {{#content "buttons"}}
+                    <a class="change-data" href="/pages/profile">Сохранить</a>
+                {{/content}}
+            </div>
+        {{/extend}}
+    {{/content}}
+{{/extend}}
