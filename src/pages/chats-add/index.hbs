@@ -59,9 +59,12 @@ users:
     time: '09:13'  
 ---
 
-
-
-
-
 {{#extend "chats"}}
+  {{#content "modal"}}<div class="adding-user">
+    <form>
+        <h2>Добавить пользователя</h2>
+        {{> Input type="text" title="Логин"}}
+        <a class='button-solid' onclick="alert('Пользователь добавлен, юху!')" href="/pages/chats">Добавить</a>
+    </form>
+  {{/content}}
 {{/extend}}

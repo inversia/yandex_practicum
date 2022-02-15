@@ -175,4 +175,26 @@
             }
         }
     }
+
+    .adding-user {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.596);
+        top:0;
+        left:0;
+        z-index: 20;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        form {
+            background-color: rgb(255, 255, 255);
+            
+            h2 {
+                font-size: 2vw;
+                margin-bottom: 2em;
+            }
+        }
+    }
 }

@@ -18,6 +18,7 @@ html {
     --grey:#7D7D7D;
     --super-light-grey: rgba(156, 156, 156, 0.123);
     --acid-lime:rgb(234, 255, 47);
+    --lilac:#725BFF;
 
     body {
 
@@ -141,6 +142,15 @@ html {
                 background-color: rgb(234, 255, 47);
                 box-shadow: 0vw 0vw 1.1vw 0.2vw rgba(0, 0, 0, 0.089);
                 font-size: var(--form-font-size);
+                display: flex;
+                justify-content: center;
+                transition: 0.35s ease-in-out;
+                transition-property: color, background-color;
+
+                &:hover {
+                    background-color: var(--lilac);
+                    color:white;
+                }
             }       
         }
     }

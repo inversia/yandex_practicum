@@ -59,9 +59,12 @@ users:
     time: '09:13'  
 ---
 
-
-
-
-
 {{#extend "chats"}}
+  {{#content "modal"}}<div class="adding-user">
+    <form>
+        <h2>Удалить пользователя</h2>
+        {{> Input type="text" title="Логин"}}
+        <a class='button-solid' onclick="alert('Контакт удалён!')" href="/pages/chats">Удалить</a>
+    </form>
+  {{/content}}
 {{/extend}}

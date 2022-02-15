@@ -9,6 +9,12 @@ body {
                     background-size: 60%;
                     background-position: 35% 50%;
                     background-repeat: no-repeat;
+
+                    &:hover {
+                        background-color: var(--lilac);
+                        background-image: url(../../components/icons/logout-white.svg);
+                        color:white;
+                    }
                 }
             }
         }
