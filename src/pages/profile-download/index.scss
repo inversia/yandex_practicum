@@ -45,6 +45,18 @@ body {
                     width: 10vw;
                     line-height: 1.3em;
                     text-decoration: underline;
+                    position: relative;
+
+                    input {
+                        position: absolute;
+                        left: 0;
+                        top:0;
+                        opacity: 0;
+                        height: 100%;
+                        width: 100%;
+                        border: 2px solid black;
+                        cursor: pointer;
+                    }
                 }
 
                 .button-solid {

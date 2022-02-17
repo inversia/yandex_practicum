@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../components/images/wrong.jpeg);
+    padding-left: 9vw;
+    // padding-top: 20vw;
+    color:white;
+    justify-content: center;
+
+    h1 {
+        font-size: 10vw;
+        color:white;
+    }
+
+    h2 {
+        margin-top: 1em;
+        font-size: 2.7vw;
+        color:white;
+    }
+
+    a {
+        background-color: var(--acid-lime);
+        margin-top: 2em;
+        padding: 1em 1.5em;
+        font-size: 1.2vw;
+        border-radius: 1vw;
+        color:var(--light-black);
+        transition: 0.35s ease-in-out;
+        transition-property: color, background-color;
+        width: 10vw;
+        display: flex;
+        justify-content: center;
+
+        &:hover {
+            background-color: var(--lilac);
+            color:white;
+        }
+    }
+}
+
+
+

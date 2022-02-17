@@ -6,7 +6,8 @@
 		"cleanup": "rm -rf .parcel-cache dist",
 		"build": "npm run cleanup && cd src && parcel build index.hbs pages/**/*.hbs --dist-dir ../dist",
 		"watch": "node watch",
-		"serve": "cd dist && python3 -m http.server 3000"
+		"serve": "node ./src/server.js",
+		"start": "npm run serve"
 	},
 	"keywords": [],
 	"author": "",
@@ -19,6 +20,8 @@
 		"parcel": "^2.2.1"
 	},
 	"dependencies": {
+		"express": "^4.17.2",
+		"express-urlrewrite": "^1.4.0",
 		"handlebars": "^4.7.7",
 		"lodash": "^4.17.21"
 	}
