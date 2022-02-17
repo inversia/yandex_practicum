@@ -4,7 +4,7 @@ const rewrite = require('express-urlrewrite');
 const app = express();
 const PORT = 3000;
 
-app.use(rewrite('/', '/pages/login'));
+// app.use(rewrite('/', '/pages/login'));
 
 app.use(express.static('./dist'));
 
