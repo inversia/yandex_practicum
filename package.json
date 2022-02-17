@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"engineStrict": true,
 	"engines": {
-		"node": "=16.4.2"
+		"node": "=16.14.0"
 	},
 	"description": "",
 	"scripts": {
