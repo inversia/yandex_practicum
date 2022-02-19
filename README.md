@@ -6,4 +6,4 @@
 #### Билдить через `npm run build`
 
 #### Ссылка на pull request: https://github.com/inversia/yandex_practicum/pull/2
-#### Ссылка на netlify: https://clever-kalam-8380f4.netlify.app/pages/login/
+#### Ссылка на netlify: https://clever-kalam-8380f4.netlify.app
