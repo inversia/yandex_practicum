@@ -1,0 +1,200 @@
+.chats-wrapper {
+
+    flex: 1;
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+    --chats-padding:1.2vw;
+    position: relative;
+
+    & > * {
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .chat-list-wrapper {
+        flex:0.6;
+        position: relative;
+        flex-direction: column;
+        display: flex;
+        padding: var(--chats-padding);
+        box-shadow: 0vw 0vw 2.1vw 0.2vw rgba(0, 0, 0, 0.089);
+        align-content: stretch;
+        overflow: hidden;
+      
+
+        a {
+            border:none;
+            background-color: transparent;
+            top:0;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-bottom: 1em;
+            font-family: 'Ubuntu', sans-serif;
+            background-image: url(../../components/icons/profile.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            height: 3vw;
+            width: 3vw;
+            
+        }
+
+        input {
+            width:100%;
+            outline: none;
+            font-family: 'Ubuntu', sans-serif;
+            background: linear-gradient(to left,var(--acid-lime) 3%,#e5ff0041 57%);
+            border:none;
+            padding: 0.5em;
+            border-radius: 0.5vw;
+            margin-bottom: 2em;
+
+        }
+
+        .chat-list {
+            overflow: scroll;
+        }
+    }
+
+    .chat {
+        flex:2;
+        padding: var(--chats-padding) var(--chats-padding) 0vw var(--chats-padding);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    
+        .active-user-menu {
+            // border:4px solid rgb(255, 102, 0);
+            position: relative;
+            height: 3vw;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: var(--chats-padding);
+            
+            .avatar {
+                width: 3vw;
+                min-height: 3vw;
+                border-radius: 100%;
+                background-color: aqua;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .username {
+                display: flex;
+                align-items: center;
+                margin-left: var(--chats-padding);
+                
+            }
+
+            button {
+                position: absolute;
+                right: 0;
+                top:0;
+                cursor: pointer;
+                height: 100%;
+                width: 2.5vw;
+                background-image: url(../../components/icons/burger.svg);
+                background-size: contain;
+
+                nav {
+                    right:3vw;
+                    top:3vw;  
+                    z-index: 2; 
+                }
+            }
+        }
+
+        .messages {
+            // padding-bottom: var(--chats-padding);
+            flex:1;
+            border-bottom:1px solid var(--super-light-grey);
+            border-top:1px solid var(--super-light-grey);
+            width: 100%;
+            overflow: scroll;
+            // height: 100%;
+            gap: var(--chats-padding);
+            padding-bottom: var(--chats-padding);
+            flex-direction: column;
+            display: flex;
+            min-height: min-content;
+        }
+
+        // Spacer (takes free space)
+        .messages:before {
+            content: '';
+            display: block;
+            flex: 1 0 auto; // flex-shrink: 0 needed for container to be able to scroll
+        }
+
+        .message-inputs-wrapper {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            height: 3vw;
+            margin: var(--chats-padding) 0;
+
+            button {
+                width:2.5vw;
+                background-image: url(../../components/icons/plus.svg);
+                margin-right: 1em;
+                position: relative;
+
+                nav {
+                    // position: absolute;
+                    bottom: 3.5vw;
+                    left:-2vw;
+                }
+
+            }
+
+            textarea, input {
+                width: 87%;
+                border-radius: 0.7vw;
+                border: none;
+                background-color: #e7ff00;
+                padding: 0.5em 0.5em;
+                height: 100%;
+                
+                
+            }
+
+            .send {
+                position: absolute;
+                right:0;
+                bottom: 0;
+                height: 100%;
+                width: 4.5vw;
+                background-size: contain;
+                background-image: url(../../components/icons/send_message.svg);
+                margin-right: 0;
+                margin-left: 2vw;
+            }
+        }
+    }
+
+    .adding-user {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.596);
+        top:0;
+        left:0;
+        z-index: 20;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        form {
+            background-color: rgb(255, 255, 255);
+            
+            h2 {
+                font-size: 2vw;
+                margin-bottom: 2em;
+            }
+        }
+    }
+}

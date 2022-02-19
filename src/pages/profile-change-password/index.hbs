@@ -1,0 +1,24 @@
+{{#extend "default"}}
+    {{#content "content"}}
+        {{#extend "profileBase"}}
+                {{#content "items"}}
+                    <div class="info-item">
+                        <label>Старый пароль</label>
+                        <input type="password" name="oldPassword" placeholder="•••••••••••••••"></input>
+                    </div>
+                    <div class="info-item">
+                        <label>Новый пароль</label>
+                        <input type="password" name="newPassword" placeholder="•••••••••••••••••••••••••••"></input>
+                    </div>
+                    <div class="info-item">
+                        <label>Повторите новый пароль</label>
+                        <input type="password" placeholder="•••••••••••••••••••••••••••"></input>
+                    </div>
+                {{/content}}
+                {{#content "buttons"}}
+                    <a class="change-data" href="/pages/profile">Сохранить</a>
+                {{/content}}
+            </div>
+        {{/extend}}
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+        font-size: 10vw;
+    }
+
+    h2 {
+        margin-top: 1em;
+        font-size: 2.7vw;
+    }
+
+    a {
+        background-color: var(--acid-lime);
+        margin-top: 2em;
+        padding: 1em 1.5em;
+        border-radius: 1vw;
+        color:var(--light-black);
+        transition: 0.35s ease-in-out;
+        transition-property: color, background-color;
+
+        &:hover {
+            background-color: var(--lilac);
+            color:white;
+        }
+    }
+}
+
+
+

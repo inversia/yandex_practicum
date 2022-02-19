@@ -1,0 +1,32 @@
+.dropdown-button-wrapper {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2vw;
+    padding: 0.7em;
+    white-space: nowrap;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    color:var(--light-black);
+
+    &.delete {
+        .icon {
+            transform: rotate(45deg);
+        }
+    }
+
+    .icon {
+        height: 2.5vw;
+        width: 2.5vw;
+        margin-right: 0.7em;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        
+    }
+
+    .text {
+        flex: 0.2;
+
+    }
+}

@@ -1,0 +1,70 @@
+---
+
+users:
+  - username: Norm man
+    avatar: ../../components/images/normalInside.jpeg
+    lastMessage: 'Ресурсы, посвящённые симуляции жидкостей, могут быть очень пугающими.'
+    messageCounter: 3
+    time: '12:30'
+  - username: Bro
+    avatar: ../../components/images/unicorn.jpeg
+    lastMessage: 'Частоты меньше 10 герц не получишь через колонки домашние. Там специальные излучатели нужны, либо гигантская органная труба, либо что-то на основе биений при сложении близких частот...!'
+    messageCounter: 1
+    time: '09:13'
+  - username: Zazu
+    avatar: ../../components/images/putiputi.jpeg
+    lastMessage: 'чётко про 10 герц не скажу, я на эквалайзере выставлял от нуля до 50 и уменьшал верх, пока видимая слышимость не станет минимальна'
+
+    messageCounter: 2
+    time: '3:33'
+  - username: Vtl4ek
+    avatar: ../../components/images/abstract.jpg
+    lastMessage: 'С того времени, как человек получил возможность называться разумным, его постоянно донимал вопрос: как избежать смерти?'
+    messageCounter: 23
+    time: '12:30'
+  - username: Mommy
+    avatar: ../../components/images/tusich.jpeg
+    lastMessage: 'Я поддерживал эти идеи, эти интеллектуальные концепции, совершенно не связанные с моим собственным опытом.'
+    messageCounter: 1
+    time: '09:13'
+  - username: Zazu
+    avatar: ../../components/images/putiputi.jpeg
+    lastMessage: 'Обычно домашняя акустика от 20 Гц.'
+    messageCounter: 4
+    time: '3:33'
+  - username: Vtl4ek
+    avatar: ../../components/images/normalInside.jpeg
+    lastMessage: 'С того времени, как человек получил возможность называться разумным, его постоянно донимал вопрос: как избежать смерти?'
+    messageCounter: 3
+    time: '12:30'
+  - username: Mommy
+    avatar: ../../components/images/unicorn.jpeg
+    lastMessage: 'Еще можно было собрать эллиптический отражатель, в фокусе поставить динамик, а другой фокус направить на кровать злодеев и врубать ночью!'
+    messageCounter: 18
+    time: '09:13'
+  - username: Zazu
+    avatar: ../../components/images/abstract.jpg
+    lastMessage: 'Цель проекта (3), по словам старшего ВП – не заменить людей ИИ-агентом, а обогатить их игровой опыт, дав им '
+    messageCounter: 2
+    time: '3:33'
+  - username: Norm man
+    avatar: ../../components/images/normalInside.jpeg
+    lastMessage: 'Ресурсы, посвящённые симуляции жидкостей, могут быть очень пугающими.'
+    messageCounter: 3
+    time: '12:30'
+  - username: Bro
+    avatar: ../../components/images/unicorn.jpeg
+    lastMessage: 'Нет никакой судьбы. Есть то, что ты делаешь, и то, за что ты боишься браться'
+    messageCounter: 1
+    time: '09:13'  
+---
+
+{{#extend "chats"}}
+  {{#content "modal"}}<div class="adding-user">
+    <form>
+        <h2>Добавить пользователя</h2>
+        {{> Input type="text" title="Логин"}}
+        <a class='button-solid' onclick="alert('Пользователь добавлен, юху!')" href="/pages/chats">Добавить</a>
+    </form>
+  {{/content}}
+{{/extend}}
